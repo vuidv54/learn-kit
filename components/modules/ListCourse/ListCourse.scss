@@ -1,0 +1,75 @@
+.list-course {
+  min-height: 100vh;
+  padding: 4rem;
+  background-color: var(--gray-background);
+  position: relative;
+
+  &::before {
+    --ellipse-width: 500px;
+    content: "";
+    display: block;
+    width: var(--ellipse-width);
+    height: var(--ellipse-width);
+    position: absolute;
+    z-index: 9;
+    top: 50%;
+    right: -380px;
+    transform: translateY(-50%);
+    background-color: var(--ellipse-d1-color);
+    opacity: 0.8;
+    filter: blur(75px);
+  }
+
+  .inner {
+    min-height: 100vh;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .wrapper-heading {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-direction: column;
+      max-width: 60rem;
+      text-align: center;
+
+      .list-title {
+        font-size: 3.6rem;
+        font-weight: 700;
+      }
+
+      .list-description {
+        font-size: 1.6rem;
+        display: block;
+      }
+    }
+
+    .wrapper-course {
+      width: 100%;
+      display: grid;
+      grid-gap: 3rem;
+      grid-template-columns: repeat(4, 1fr);
+
+      @media (max-width: 1023px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (max-width: 767px) {
+        gap: 1.6rem;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .more-btn {
+      font-weight: 700;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}

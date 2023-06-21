@@ -1,0 +1,53 @@
+.popular-course-item {
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--white-color);
+
+  .wapper-course-logo {
+    --height: 26rem;
+    position: relative;
+    width: 100%;
+    height: var(--height);
+  }
+
+  .wapper-info {
+    padding: 2rem;
+
+    .sub-title {
+      margin-top: 1.8rem;
+      font-weight: 600;
+      font-size: 1.4rem;
+      color: var(--primary-color);
+    }
+
+    .course-title {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1.1rem;
+      margin-top: 0.8rem;
+    }
+
+    .course-description {
+      font-size: 1.4rem;
+      display: block;
+      margin-bottom: 1.6rem;
+    }
+
+    .read-more-btn.button {
+      padding-left: 0;
+      padding-right: 0;
+      box-shadow: none;
+      color: var(--primary-color);
+      background-color: var(--white-color);
+
+      &:hover {
+        color: var(--primary-hover-color);
+      }
+
+      .arrow-right-icon.anticon {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}

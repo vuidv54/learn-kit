@@ -1,0 +1,41 @@
+.ant-input.input,
+.ant-input-affix-wrapper.input {
+  font-family: var(--font-nunito);
+  border-color: var(--disabled-color);
+
+  &:hover,
+  &:focus {
+    border-color: var(--primary-hover-color);
+  }
+
+  &.disabled {
+    border-color: var(--disabled-color);
+  }
+}
+
+.ant-input-affix-wrapper.input {
+  .ant-input-suffix {
+    color: var(--disabled-color);
+  }
+
+  &:hover,
+  &:focus {
+    .ant-input-suffix {
+      color: var(--primary-hover-color);
+    }
+  }
+
+  &.disabled {
+    .ant-input-suffix {
+      color: var(--disabled-color);
+    }
+  }
+}
+
+.ant-input-affix-wrapper-focused.input {
+  border-color: var(--primary-hover-color);
+
+  .ant-input-suffix {
+    color: var(--primary-hover-color);
+  }
+}

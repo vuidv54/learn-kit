@@ -1,0 +1,57 @@
+.navbar-drawer {
+  .button.menu-btn {
+    box-shadow: none;
+    color: var(--black-color);
+    background-color: var(--white-color);
+    font-size: 2.6rem;
+
+    &:hover {
+      color: var(--black-color);
+      background-color: #dbdbdb;
+    }
+  }
+}
+
+.ant-drawer-header {
+  &-title {
+    display: flex;
+    flex-direction: row-reverse;
+
+    button.ant-drawer-close {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+  }
+}
+
+.ant-drawer-body {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3rem;
+
+    a + a {
+      border-top: 1px solid var(--disabled-color);
+    }
+
+    .navbar__title {
+      font-size: 1.8rem;
+      font-weight: 400;
+      padding: 1.2rem 0;
+    }
+
+    .navbar__title + .navbar__title {
+    }
+  }
+
+  .login {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+
+    button {
+      box-shadow: none;
+    }
+  }
+}

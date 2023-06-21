@@ -1,0 +1,49 @@
+.our-team {
+  .inner {
+    height: 100%;
+    padding: 4rem;
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+    flex-direction: column;
+
+    .wrapper-heading {
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      flex-direction: column;
+      max-width: 60rem;
+      text-align: center;
+
+      .ourteam-title {
+        font-size: 3.6rem;
+        font-weight: 700;
+      }
+
+      .ourteam-description {
+        font-size: 1.6rem;
+        display: block;
+      }
+    }
+
+    .swiper {
+      padding: 4rem 0;
+    }
+
+    .wrapper-member {
+      width: 100%;
+      display: grid;
+      place-items: center;
+      gap: 4rem;
+      grid-template-columns: repeat(3, 1fr);
+
+      @media (max-width: 1023px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 767px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+}

@@ -1,0 +1,99 @@
+.course-item {
+  --height: 27rem;
+  border-radius: var(--border-radius);
+  height: var(--height);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover,
+  &.isActive {
+    box-shadow: 0px 8px 12px 4px rgba(147, 197, 253, 0.2);
+
+    .course-title,
+    .course-description {
+      color: var(--primary-color);
+    }
+
+    .course-logo {
+      .c-logo {
+        path {
+          fill: var(--primary-color);
+        }
+      }
+
+      .html-logo,
+      .css-logo,
+      .dsa-logo,
+      .js-logo {
+        path:first-child,
+        path:last-child {
+          fill: var(--primary-color);
+        }
+      }
+
+      .python-logo {
+        path:nth-child(1),
+        path:nth-child(3),
+        path:nth-child(5) {
+          fill: var(--primary-color);
+        }
+      }
+
+      .ts-logo {
+        path:first-child {
+          fill: var(--primary-color);
+        }
+      }
+
+      .react-logo {
+        path:first-child,
+        path:nth-child(5) {
+          fill: var(--primary-color);
+        }
+      }
+    }
+  }
+
+  .course-logo {
+    --width: 10rem;
+    width: var(--width);
+    height: var(--width);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 8px 12px rgba(149, 157, 165, 0.2);
+    margin-bottom: 2rem;
+
+    .c-logo {
+      path {
+        fill: var(--black-color);
+      }
+    }
+  }
+
+  .course-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .course-description {
+    font-size: 1.2rem;
+    font-weight: 300;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

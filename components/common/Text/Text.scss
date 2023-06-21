@@ -1,0 +1,12 @@
+.ant-typography.text {
+  font-family: var(--font-nunito);
+  font-size: 1.6rem;
+
+  &.light {
+    font-weight: 300;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}

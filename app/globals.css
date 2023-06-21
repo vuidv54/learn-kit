@@ -1,9 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
 :root {
-  --max-width: 1100px;
+  --max-width: 1170px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  /* custom font */
+  --font-nunito: "Nunito", sans-serif;
+
+  /* custom width height */
+  --header-height: 100px;
 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -38,6 +46,27 @@
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
+
+  /* custom variables global */
+  --gray-background: #f8f9fa;
+
+  --white-color: #fff;
+  --black-color: #000;
+
+  --primary-color: #3b82f6;
+  --primary-hover-color: #2563eb;
+  --normal-button-color: #94a3b8;
+  --button-disabled-background: #cbd5e1;
+
+  --ellipse-d1-color: #59b1e680;
+  --ellipse-d2-color: #d5aee4;
+
+  --disabled-color: #94a3b8;
+
+  --normal-radius: 6px;
+  --rounded-radius: 40px;
+
+  --box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,16 +112,13 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 62.5%;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: var(--black-color);
+  background-color: var(--white-color);
+  font-family: var(--font-nunito);
 }
 
 a {
@@ -103,5 +129,34 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* custom container */
+.container {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+/* PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {
+  .container {
+    --max-width: 984px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    --max-width: 644px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 2rem;
   }
 }

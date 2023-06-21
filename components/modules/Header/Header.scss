@@ -1,0 +1,52 @@
+.header {
+  height: var(--header-height);
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white-color);
+
+  .inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navbar {
+      display: flex;
+      gap: 44px;
+      flex-direction: row;
+      transition: all 0.3s;
+
+      .navbar__title {
+        font-size: 1.6rem;
+        font-weight: 400;
+      }
+    }
+
+    .login {
+      display: flex;
+      gap: 12px;
+    }
+
+    .mobile-menu {
+      display: none;
+    }
+
+    @media (max-width: 1023px) {
+      .navbar,
+      .login {
+        display: none;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    --header-height: 80px;
+  }
+}
